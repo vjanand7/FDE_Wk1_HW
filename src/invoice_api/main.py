@@ -17,6 +17,12 @@ class Invoice(BaseModel):
     status: str = "PENDING"
 
 
+class InvoiceUpdate(BaseModel):
+    vendor: str
+    amount: float
+    status: str
+
+
 def load_invoices():
     with open(DATA_FILE, "r", encoding="utf-8") as f:
         return json.load(f)
@@ -49,6 +55,17 @@ def create_invoice(invoice: Invoice):
     invoices.append(new_invoice)
     save_invoices(invoices)
     return {"message": "Invoice created successfully", "invoice": new_invoice}
+
+
+@app.put("/invoices/{invoice_id}")
+def update_invoice(invoice_id: str, update: InvoiceUpdate):
+    invoices = load_invoices()
+    for invoice in invoices:
+        if invoice["invoice_id"] == invoice_id:
+            invoice.update(update.model_dump())
+            save_invoices(invoices)
+            return {"message": "Invoice updated successfully", "invoice": invoice}
+    raise HTTPException(status_code=404, detail="Invoice not found")
 
 
 @app.delete("/invoices/{invoice_id}")
