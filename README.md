@@ -8,14 +8,13 @@ Flow: Client / Swagger -> FastAPI -> Python code -> `invoices.json`
 
 ## How to run
 
-Start the server from inside the `src/invoice_api` folder:
+Install the packages, then start the server from inside the `src/invoice_api` folder:
 
 ```
+pip install -r requirements.txt
 cd src/invoice_api
 uvicorn main:app --reload
 ```
-
-Important: the path to `invoices.json` is relative (`data/invoices.json`). If you start the server from any other folder, you will get a `FileNotFoundError`.
 
 ## Links
 
