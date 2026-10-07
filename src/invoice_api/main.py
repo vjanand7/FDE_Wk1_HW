@@ -6,8 +6,8 @@ from pydantic import BaseModel
 
 app = FastAPI(title="Invoice API")
 
-DATA_FILE = "data/invoices.json"
-
+# Resolve relative to this file so it works no matter where uvicorn is started from
+DATA_FILE = Path(__file__).parent / "data" / "invoices.json"
 
 
 class Invoice(BaseModel):
