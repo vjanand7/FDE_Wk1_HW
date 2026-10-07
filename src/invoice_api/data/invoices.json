@@ -1,0 +1,38 @@
+[
+  {
+    "invoice_id": "INV-101",
+    "vendor": "ABC Ltd",
+    "amount": 85000,
+    "status": "PENDING"
+  },
+  {
+    "invoice_id": "INV-102",
+    "vendor": "XYZ Corp",
+    "amount": 142500,
+    "status": "PENDING"
+  },
+  {
+    "invoice_id": "INV-103",
+    "vendor": "LMN Inc",
+    "amount": 56000,
+    "status": "PENDING"
+  },
+  {
+    "invoice_id": "INV-104",
+    "vendor": "PQR Enterprises",
+    "amount": 98000,
+    "status": "PENDING"
+  },
+  {
+    "invoice_id": "INV-105",
+    "vendor": "DEF Solutions",
+    "amount": 120000,
+    "status": "PENDING"
+  },
+  {
+    "invoice_id": "INV-106",
+    "vendor": "ABC Solutions",
+    "amount": 9999.0,
+    "status": "COMPLETED"
+  }
+]
