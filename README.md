@@ -28,6 +28,7 @@ uvicorn main:app --reload
 | GET | `/invoices` | Get all invoices | 200 | – |
 | GET | `/invoices/{invoice_id}` | Get one invoice | 200 | 404 if not found |
 | POST | `/invoices` | Add a new invoice | 201 | 409 if the id already exists, 422 if the data is wrong |
+| PUT | `/invoices/{invoice_id}` | Update an existing invoice (`vendor`, `amount`, `status`) | 200 | 404 if not found, 422 if the data is wrong |
 | DELETE | `/invoices/{invoice_id}` | Delete an invoice | 200 | 404 if not found |
 
 ## Invoice fields
