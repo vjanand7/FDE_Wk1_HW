@@ -26,8 +26,8 @@
   {
     "invoice_id": "INV-105",
     "vendor": "DEF Solutions",
-    "amount": 120000,
-    "status": "PENDING"
+    "amount": 120000.0,
+    "status": "COMPLETED"
   },
   {
     "invoice_id": "INV-106",
